@@ -1,0 +1,17 @@
+<<ex1>>
+Bibliotecas são coleções de subprogramas criados e testados para facilitar o
+desenvolvimento de aplicações, entregando funções prontas que o programador 
+não precisara desenvolver.
+
+-----------------------------------------------------------------------------------
+<<ex2>>
+-MVC é um modelo para organizar um projeto em pacotes de forma padronizada, é 
+recomendado utilizar esse modelo para facilitar a manipulação e manutenção
+do programa.
+
+-DAO 
+
+-o padrão Singleton tem como objetivo garantir que uma classe não seja intanciada
+várias vezes, ocupando assim memória cache desnecessariamente.
+
+-----------------------------------------------------------------------------------
