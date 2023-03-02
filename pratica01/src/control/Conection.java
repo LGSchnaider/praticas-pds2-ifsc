@@ -11,7 +11,7 @@ public class Conection {
 	
 	private Conection() {}
 	
-	public Conection getInstancia() {
+	public static Conection getInstancia() {
 		if (instancia == null) {
 			instancia = new Conection();
 		}
