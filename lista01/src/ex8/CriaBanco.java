@@ -7,7 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Ex8 {
+
+public class CriaBanco {
 	public static void main(String[] args) {
 		try {
 			Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost/", "root", "aluno");
@@ -29,13 +30,29 @@ public class Ex8 {
 			WSQL = "INSERT INTO animal (classe, especie) VALUES ('Mamiféro', 'troglodytes')";
 			stm.executeUpdate(WSQL);
 			
-//			WSQL = "SELECT * FROM animal";
-//			ResultSet a = stm.executeQuery(WSQL);
-
-			
 			conexao.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
+		
+	}
+	public void inserir(String c, String e) {
+		String classe = c;
+		String especie = e;
+		try {
+			Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost/", "root", "aluno");
+			Statement stm = conexao.createStatement();
+			String WSQL = "use Lista01";
+			stm.executeUpdate(WSQL);
+			
+			WSQL = "INSERT INTO animal (classe, especie) VALUES ('"+classe+"', '"+especie+"')";
+			stm.executeUpdate(WSQL);
+			
+			
+		}catch(SQLException e1) {
+			e1.printStackTrace();
+		}
+
 	}
 }
